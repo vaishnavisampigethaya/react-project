@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+.calc-body {
+  max-width: 400px;
+  margin: auto;
+}
+
+.result {
+  height: 65px;
+  background-color: #bbb;
+  width: 100%;
+}
+
+.result p {
+  font-size: 40px;
+}
+
+.Buttons {
+  display: block;
+  background-color: #bbb;
+}
+
+.Buttons button {
+  width: 25%;
+  height: 60px;
+  font-size: 30px;
+}
+
+.Buttons button:hover {
+  background-color: blue;
+}
