@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 import Card from "../UI/Card";
 import "./Persondisplay.css";
-import Hikesal from "./Hikesal";
+import Hikesal from "./WithHikesal";
 
 const Persondetail = (props) => {
   const [salary, setSalary] = useState(props.salary);
-  const Hikesal = () => {
+  const WithHikesal = () => {
     setSalary(salary + salary * 0.05);
     console.log(salary);
   };
@@ -15,11 +15,11 @@ const Persondetail = (props) => {
       <div className="description">
         <h2>{props.id}</h2>
         <h2>{props.fullname}</h2>
-        <div className="price">Rs.{props.salary}</div>
-        <button onClick={Hikesal}>Hike salary 5% </button>
+        <div className="price">Rs.{salary}</div>
+        <button onClick={WithHikesal}>Hike salary 5% </button>
       </div>
     </Card>
   );
 };
 
-export default Hikesal(Persondetail, "myclass");
+export default Persondetail;

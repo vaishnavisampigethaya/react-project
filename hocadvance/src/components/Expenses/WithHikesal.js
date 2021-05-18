@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Hikesal = (WrappedComponent, classes) => {
+const WithHikesal = (WrappedComponent, classes) => {
   const [salary, setSalary] = useState(props.salary);
 
   setSalary(salary + salary * 0.05);
@@ -11,4 +11,4 @@ const Hikesal = (WrappedComponent, classes) => {
     </div>
   );
 };
-export default Hikesal;
+export default WithHikesal;
