@@ -7,3 +7,13 @@ h2 {
 h2:hover {
   color: gold;
 }
+
+h3 {
+  text-align: center;
+  color: aqua;
+  font-size: 3em;
+}
+
+h3:hover {
+  color: bisque;
+}

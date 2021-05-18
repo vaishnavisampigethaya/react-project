@@ -18,6 +18,8 @@
 }
 .description:hover {
   border: 1px solid hotpink;
+  box-shadow: 0px 1px 8px rgba(119, 165, 192, 0.25);
+  transform: scale(1);
 }
 
 .person h2 {
