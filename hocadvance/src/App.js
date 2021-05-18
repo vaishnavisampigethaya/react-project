@@ -17,6 +17,7 @@ const App = () => {
       salary: 35000,
     },
   ];
+
   const testing = [
     {
       id: "1TE",

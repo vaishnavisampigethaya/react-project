@@ -22,6 +22,16 @@
   transform: scale(1);
 }
 
+.description button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2d3ed8;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
 .person h2 {
   color: #3a3a3a;
   font-size: 1rem;
