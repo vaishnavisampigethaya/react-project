@@ -2,7 +2,6 @@ import React from "react";
 
 import Card from "../UI/Card";
 import "./saldisplay.css";
-import Persondetail from "./Anotherdeptdetail";
 import Anotherdeptdetail from "./Anotherdeptdetail";
 
 const Anotherdeptsal = (props) => {
