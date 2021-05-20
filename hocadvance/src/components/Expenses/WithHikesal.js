@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 const WithHikesal = (WrappedComponent, classes) => {
   const Clickhandler = (props) => {
-    const [salary, setSalary] = useState(props.salary);
-    setSalary(salary + salary * 0.05);
-    console.log(salary);
-
+    const hikedsalary = props.salary + props.salary * 0.05;
+    const [hsalary, setSalary] = useState(hikedsalary);
+    setSalary(hikedsalary);
+    console.log(hikedsalary);
     return (props) => (
       <div className={classes}>
-        <WrappedComponent {...props} />
+        <WrappedComponent
+          hikedsalary={hsalary}
+          {...props}
+          Clickhandler={Clickhandler}
+        />
       </div>
     );
   };
-  return Clickhandler;
+
+  return WrappedComponent;
 };
 
 export default WithHikesal;
