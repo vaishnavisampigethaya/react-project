@@ -12,15 +12,20 @@ const WithHikesal = (OriginalComponent) => {
     }
 
     Clickhandler = () => {
+      console.log("HI");
       this.setState((prevState) => {
-        return {
-          salary: this.state.salary + this.state.salary * 0.5,
-          ...this.props,
-        };
+        return { salary: this.state.salary + this.state.salary * 0.05 };
       });
     };
+
     render(props) {
-      return <OriginalComponent salary={this.state.salary} {...props} />;
+      return (
+        <OriginalComponent
+          salary={this.state.salary}
+          {...this.state}
+          Clickhandler={this.Clickhandler}
+        />
+      );
     }
   }
   return NewComponent;
