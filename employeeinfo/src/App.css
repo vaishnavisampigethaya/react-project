@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-color: black;
+  height: 100%;
+  width: 100% !important;
+  color: white;
+}
+.App h1 {
+  font-size: 70px;
+}
+.App h4 {
+  color: red;
+}

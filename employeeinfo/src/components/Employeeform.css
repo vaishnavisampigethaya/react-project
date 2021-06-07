@@ -1,0 +1,44 @@
+.form-group {
+  background-color: rgb(238, 216, 16);
+  height: auto;
+  width: 70%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  margin: 100px auto;
+  display: table;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-group h2 {
+  text-align: center;
+}
+form {
+  display: inline-block;
+  padding-top: 10px;
+}
+.form-elements {
+  text-align: center;
+  display: table-row;
+  width: 60%;
+  margin: auto;
+}
+.form-elements input {
+  display: table-cell;
+  border-radius: 5px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+.form-elements label {
+  display: table-cell;
+}
+
+.form-elements button {
+  text-align: center;
+  background-color: crimson;
+  color: white;
+  border-radius: 5px;
+  display: block;
+  margin: 0px 0px 0px 200px;
+  height: 35px;
+}

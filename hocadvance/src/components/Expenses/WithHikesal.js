@@ -7,11 +7,7 @@ const WithHikesal = (WrappedComponent, classes) => {
     console.log(hikedsalary);
     return (props) => (
       <div className={classes}>
-        <WrappedComponent
-          hikedsalary={hsalary}
-          {...props}
-          Clickhandler={Clickhandler}
-        />
+        <WrappedComponent hikedsalary={hsalary} {...props} />
       </div>
     );
   };
