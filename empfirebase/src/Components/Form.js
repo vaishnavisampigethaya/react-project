@@ -13,25 +13,42 @@ export default class extends Component {
   }
   addEmpHandler = (event) => {
     event.preventDefault();
-    const val = {
-      id: "",
-      name: "",
-      age: "",
-      dept: "",
-      salary: "",
-    };
+    if (
+      this.state.name == "" ||
+      this.state.age == "" ||
+      this.state.dept == "" ||
+      this.state.salary == ""
+    ) {
+      alert("Fill all the fields");
+    } else if (!isNaN(this.state.name) || !isNaN(this.state.dept)) {
+      alert("Enter proper details in Employee Name or Employee Department");
+    } else if (this.state.age <= 14) {
+      alert(
+        "Employment of children below 14 and 15 years in certain prohibited under ACT 61 OF 1986"
+      );
+    } else if (this.state.salary <= 0) {
+      alert("Enter the correct salary. Salary should be greater than zero");
+    } else {
+      const val = {
+        id: "",
+        name: "",
+        age: "",
+        dept: "",
+        salary: "",
+      };
 
-    const empdata = {
-      id1: Math.random(),
-      id: this.state.id,
-      name: this.state.name,
-      age: this.state.age,
-      dept: this.state.dept,
-      salary: this.state.salary,
-    };
-    this.props.onSub(empdata);
-    console.log(empdata);
-    this.setState(val);
+      const empdata = {
+        id1: Math.random(),
+        id: this.state.id,
+        name: this.state.name,
+        age: this.state.age,
+        dept: this.state.dept,
+        salary: this.state.salary,
+      };
+      this.props.onSub(empdata);
+      console.log(empdata);
+      this.setState(val);
+    }
   };
   oninputhandler = (id, event) => {
     this.setState({ [id]: event.target.value });
