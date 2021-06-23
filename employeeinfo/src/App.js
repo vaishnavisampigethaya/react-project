@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import Employeeform from "./components/Employeeform";
 import Employeedetails from "./components/Employeedetails";
-const Employee = [
+var Employee = [
   {
     id: 1,
     employeeName: "Vaishnavi",
