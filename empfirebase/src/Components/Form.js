@@ -4,7 +4,6 @@ export default class extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "",
       name: "",
       age: "",
       dept: "",
@@ -30,7 +29,6 @@ export default class extends Component {
       alert("Enter the correct salary. Salary should be greater than zero");
     } else {
       const val = {
-        id: "",
         name: "",
         age: "",
         dept: "",
@@ -38,8 +36,6 @@ export default class extends Component {
       };
 
       const empdata = {
-        id1: Math.random(),
-        id: this.state.id,
         name: this.state.name,
         age: this.state.age,
         dept: this.state.dept,
