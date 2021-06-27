@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+toast.configure();
 export default class extends Component {
   constructor(props) {
     super(props);
@@ -41,6 +43,7 @@ export default class extends Component {
         dept: this.state.dept,
         salary: this.state.salary,
       };
+
       this.props.onSub(empdata);
       console.log(empdata);
       this.setState(val);
@@ -84,7 +87,7 @@ export default class extends Component {
                 </label>
                 <input
                   type="text"
-                  placeholder="Employee Id"
+                  placeholder="Employee Department"
                   className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
                   onChange={this.oninputhandler.bind(this, "dept")}
                   value={this.state.dept}

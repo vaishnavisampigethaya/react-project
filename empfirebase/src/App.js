@@ -5,7 +5,10 @@ import Modal from "./Components/Modal";
 import Title from "./Components/Title";
 import Display from "./Components/Display";
 import React, { Component } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+toast.configure();
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -17,6 +20,7 @@ export default class App extends Component {
   }
   cancelhandle = () => {
     this.setState({ openModal: !this.state.openModal });
+    toast.info("Modal(Form) Closed");
   };
   updateHandelr = (data) => {
     const val = {
@@ -33,7 +37,11 @@ export default class App extends Component {
       .then((response) => {
         this.getData();
       });
-    this.setState({ openModal: !this.state.openModal });
+    this.setState({
+      Emp: this.state.Emp.filter((Emp) => Emp.id !== data.id),
+      openModal: !this.state.openModal,
+    });
+    toast.success("Employee detail updated Succesfully");
   };
   onEmpupdate = (id, data, e) => {
     this.setState({ openModal: true, update: data });
@@ -47,6 +55,10 @@ export default class App extends Component {
         .then((response) => {
           this.getData();
         });
+      this.setState({
+        Emp: this.state.Emp.filter((Emp) => Emp.id !== id),
+      });
+      toast.error("Employee Detail is Deleted Succesfully!!!");
     }
   };
   empHandelr = (empdata) => {
@@ -59,6 +71,7 @@ export default class App extends Component {
         empdata
       )
       .then((response) => {});
+    toast.success("Employee detail added Succesfully");
   };
   getData = () => {
     axios

@@ -61,13 +61,13 @@ export default class Modal extends Component {
   render() {
     return (
       <div className="bg-black max-h-full">
-        <div className="relative py-3 sm:w-96 mx-auto text-center max-h-full justify-center">
+        <div className="relative py-3 sm:w-96 mx-auto text-center max-h-full align-middle content-center">
           <div className="mt-4 bg-white shadow-md rounded-lg">
             <span className="text-center text-4xl text-blue-600">
               Edit details
             </span>
             <button
-              className="text-right p-3 text-4xl"
+              className="text-right p-3 text-4xl content-end"
               onClick={this.cancelHandler}
             >
               X
@@ -98,7 +98,7 @@ export default class Modal extends Component {
                 </label>
                 <input
                   type="text"
-                  placeholder="Employee Id"
+                  placeholder="Employee Department"
                   className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
                   onChange={this.oninputhandler.bind(this, "dept")}
                   value={this.state.dept}
