@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-toast.configure();
+
 export default class extends Component {
   constructor(props) {
     super(props);

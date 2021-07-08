@@ -5,10 +5,10 @@ import Modal from "./Components/Modal";
 import Title from "./Components/Title";
 import Display from "./Components/Display";
 import React, { Component } from "react";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-toast.configure();
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -116,6 +116,7 @@ export default class App extends Component {
             empcancel={this.cancelhandle.bind(this)}
           />
         )}
+        <ToastContainer />
       </div>
     );
   }
